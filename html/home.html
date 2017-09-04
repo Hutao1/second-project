@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/home-style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css"/>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-main">
+				<ul class="h-left">
+					<li>奥特莱斯购物中心
+						<ul class="shoplist">
+							<li>深圳华盛奥特莱斯</li>
+							<li>南宁华盛奥特莱斯</li>
+							<li>南昌华盛奥特莱斯</li>
+							<li>西安华盛奥特莱斯</li>
+							<li>郑州华盛奥特莱斯</li>
+							<li>哈尔滨华盛奥特莱斯</li>
+							<li>重庆华盛奥特莱斯</li>
+							<li>合肥华盛奥特莱斯</li>
+						</ul>
+					</li>
+					<li><a href="javascript:;">商家入驻</a></li>
+				</ul>
+				<ul class="h-right">
+					<li><a href="javascript:;">请登录</a></li>
+					<li><a href="javascript:;">免费注册</a></li>
+					<li><a href="javascript:;"><i class="iconfont">&#xe502;</i><span>购物车</span><b>0</b></a></li>
+					<li><a href="javascript:;">订单查询</a></li>
+					<li><a href="javascript:;">我的收藏</a></li>
+					<li><a href="javascript:;">帮助中心</a></li>
+				</ul>
+				<span>您好，欢迎来到奥莱购</span>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="n-top">
+				<img src="../img/CggUF1mgDUCAHcWmAAAaPIY0xT4626.png" alt="" />
+				<input type="text" placeholder="新秀丽"/><span>搜索</span>
+			</div>
+			<div class="n-bottom">
+				<ul>
+					<li><a href="javascript:;">首页</a></li>
+					<li><a href="javascript:;">实体店</a></li>
+					<li><a href="javascript:;">关于我们</a></li>
+					<li><a href="javascript:;"><i class="iconfont">&#xe6b3;</i>分类</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="main">
+			<div id="autoplay">
+				<img src="../img/CggUFlmlEZuAXwG_AAFPLmbGi8s003.jpg" alt="" />
+				<img src="../img/CggUFlmlEWKAUe0dAAMOTrrHj-Q996.jpg" alt="" />
+			</div>
+			<div class="num">
+				<p class="pleft shadow">1</p>
+				<p class="pright">2</p>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		$(".h-left li:eq(0)").mouseover(function(){
+			$(this).find(".shoplist").css("display","block");
+		}).mouseout(function(){
+			$(this).find(".shoplist").css("display","none");
+		})
+		/*$(".shoplist").mouseover(function(){
+			$(this).css("display","block");
+		}).mouseout(function(){
+			$(this).css("display","none");
+		})*/
+		$(".header a,.shoplist li").hover(function(){
+			$(this).css("color","#9A0F12");
+		},function(){
+			$(this).css("color","");
+		})
+	})
+	$(".h-right li:eq(0) a").click(function(){
+		location.href = "http://127.0.0.1/php/secondtest/second-project/html/login.html";
+	})
+	$(".h-right li:eq(1) a").click(function(){
+		location.href = "http://127.0.0.1/php/secondtest/second-project/html/register.html";
+	})
+	$(".h-right li:eq(2) a").click(function(){
+		location.href = "http://127.0.0.1/php/secondtest/second-project/html/shopcar.html";
+	})
+	$(".n-top input").focus(function(){
+		$(this).attr("placeholder","请输入您想寻找的商品名称");
+	})
+</script>
