@@ -36,14 +36,29 @@ a{
         margin-right: 20px;
         position: relative;
         height: 35px;
+        cursor: pointer;
     }
     .shoplist{
         box-shadow: 0px 0px 2px #000000;
         top:28px;
         position: absolute;
         display: none;
+        z-index: 1;
         border: 1px solid #666;
         background: #fff;
+        .three,.three-null{
+            font-size: 0;
+            border-width: 10px;
+            position: absolute;
+            top: -35px;
+            left: 10px;
+            border-style:solid ;
+            border-color: transparent transparent #666; 
+        }
+        .three-null{
+            top: -34px;
+            border-color:transparent transparent #fff ;
+        }
         li{
             margin-right: 0;
             float: none;
@@ -141,13 +156,42 @@ a{
 /*main*/
 .main{
     position: relative;
-    #autoplay{
-        height: 534px;
-        img{
+    width: 1423px;
+    img{
             width: 1423px;
         }
-        img:last-child{
+    #autoplay{
+        height: 534px;
+        position: relative;
+        img:nth-child(2){
             display: none;
+        }
+        .btnleft,.btnright{
+            position: absolute;
+            z-index: 10;
+            left: 210px;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            background: url(../img/forword.png) no-repeat;
+            cursor: pointer;
+        }
+        .btnright{
+            left: 1213px;
+            background: url(../img/forword.png) no-repeat;
+            background-position: -80px 0 ;
+        }
+        .btnleftb,.btnrightb{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            z-index: -1;
+            background: #fff;
+            opacity: 0;
+            border-radius: 5px;
+            &:hover{
+                opacity: .2;
+            }
         }
     }
     .num{
@@ -165,6 +209,133 @@ a{
         }
         p:first-child{
             margin-right:10px ;
+        }
+    }
+    .between{
+        height: 29px;
+        background: #f5f5f5;
+        border-bottom: 1px solid #cecece;
+    }
+}
+//footer
+.footer{
+    @include public;
+    .tubiao{
+        overflow: hidden;
+        border-bottom: 1px solid #ededed;
+        li{
+            float: left;
+            width: 240px;
+            height: 112px;
+            margin-top:5px ;
+            position: relative;
+            .tuleft{
+                position: absolute;
+                width: 62px;
+                height: 62px;
+                background: url(../img/foot-sprite.png) -270px -105px;
+                top: 20px;
+                left: 10px;
+            }
+            .turight{
+                position: absolute;
+                height: 58px;
+                top: 20px;
+                left: 85px;
+                p:nth-child(1){
+                    font-size:18px ;
+                    color: #d92b2e;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                p:nth-child(2){
+                    font-size:12px ;
+                }
+            }
+        }
+        li:nth-child(2) .tuleft{
+            background-position-x:-450px ;
+        }
+        li:nth-child(3) .tuleft{
+            background-position-x:-360px ;
+        }
+        li:nth-child(4) .tuleft{
+            background-position-x:-540px ;
+        }
+        li:nth-child(5) .tuleft{
+            background-position-x:-625px ;
+        }
+    }
+    .footer-middle{
+        box-sizing: border-box;
+        padding: 30px 0;
+        height: 230px;
+        font-size: 12px;
+        color: #666666;
+        border-bottom:1px solid  #ededed;
+        div{
+            height: 100%;
+            float: left;
+        }
+        .tel{
+            width: 177px;
+            padding-right:59px;
+            height: 100%;
+            border-right: 1px solid #ededed;
+            position: relative;
+            dl{
+                float: left;
+                dt{
+                    width: 42px;
+                    height: 43px;
+                    margin-bottom: 5px;
+                    background: url(../img/foot-sprite.png) 0 -105px;
+                }
+                dd{
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+            dl:nth-child(2){
+                float: right;
+                dt{
+                    background-position: -60px -105px;
+                }
+            }
+            span{
+                position: absolute;
+                top: 84px;
+                left: 0;
+            }
+            ul{
+                position: absolute;
+                top: 84px;
+                left: 70px;
+            }
+            p{
+                position: absolute;
+                top: 140px;
+                left: 0px;
+            }
+        }
+        .flow,.m-middle,.send,.aftermarket{
+            padding: 0 55px;
+            border-right: 1px solid #ededed;
+            ul{
+                li{
+                    margin-top: 9px;
+                    a:hover{
+                       color: #f00; 
+                    }
+                }
+                li:nth-child(1){
+                    font-size: 14px;
+                    margin-top:0 ;
+                }
+            }
+        }
+        .erwei{
+            padding-left: 37px;
         }
     }
 }
