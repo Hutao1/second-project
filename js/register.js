@@ -1,5 +1,5 @@
-$("#header").load("../html/lorepu.html .header");
-$("#footer").load("../html/lorepu.html .footer");
+$("#header").load("http://127.0.0.1/php/secondtest/second-project/html/lorepu.html .header");
+$("#footer").load("http://127.0.0.1/php/secondtest/second-project/html/lorepu.html .footer");
 var telflag = false,pwdflag = false,rpwdflag = false;
 $("#tel").focus(function(){
 	$(".teltip").html("请输入手机号").css("color","#000");

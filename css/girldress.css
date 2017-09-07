@@ -1,0 +1,51 @@
+body {
+  font-size: 12px;
+  color: #333; }
+
+.main {
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6; }
+  .main .recommend {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid #e6e6e6;
+    overflow: hidden; }
+    .main .recommend > ul {
+      height: 120px;
+      background: #fafafa;
+      text-align: center;
+      padding-top: 30px;
+      float: left;
+      font-size: 14px;
+      font-weight: bold; }
+      .main .recommend > ul li {
+        width: 40px; }
+    .main .recommend .re-right {
+      overflow: hidden;
+      height: 150px; }
+      .main .recommend .re-right li {
+        float: left;
+        margin-left: 15px;
+        margin-top: 10px; }
+        .main .recommend .re-right li dt, .main .recommend .re-right li dd {
+          float: left; }
+        .main .recommend .re-right li dd {
+          width: 130px;
+          float: left;
+          height: 130px;
+          margin-left: 10px; }
+          .main .recommend .re-right li dd p:nth-child(2) {
+            height: 30px;
+            line-height: 30px;
+            color: #ff3243; }
+          .main .recommend .re-right li dd p:nth-child(3) {
+            height: 30px;
+            line-height: 30px;
+            width: 80px;
+            background: #e6e6e6;
+            color: #656565;
+            text-align: center;
+            margin-top: 10px; }
+
+/*# sourceMappingURL=girldress.css.map */

@@ -29,6 +29,7 @@ if($status == "register"){
 		echo "1";//用户名密码都正确，可以登陆
 	}else{
 		echo "0";
+		echo $upwd;
 	}
 }else{
 	echo "参数有误";
