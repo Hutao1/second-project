@@ -130,6 +130,8 @@ a {
       margin-left: 350px; }
       .nav .n-bottom ul li:first-child a {
         color: #c81417; }
+    .nav .n-bottom ul li:nth-child(2) a:hover, .nav .n-bottom ul li:nth-child(3) a:hover {
+      color: #c81417; }
     .nav .n-bottom ul li {
       float: left;
       margin-right: 110px;
@@ -150,8 +152,13 @@ a {
   .main #autoplay {
     height: 534px;
     position: relative; }
+    .main #autoplay img {
+      position: absolute;
+      height: 533px; }
     .main #autoplay img:nth-child(2) {
-      display: none; }
+      opacity: 0; }
+    .main #autoplay .num p {
+      cursor: pointer; }
     .main #autoplay .btnleft, .main #autoplay .btnright {
       position: absolute;
       z-index: 10;
@@ -287,6 +294,63 @@ a {
         margin-top: 0; }
     .footer .footer-middle .erwei {
       padding-left: 37px; }
+  .footer .footer-bottom {
+    font-size: 12px;
+    color: #7e7e7e;
+    margin-top: 28px; }
+    .footer .footer-bottom .ftt {
+      width: 540px;
+      margin: 0 auto; }
+      .footer .footer-bottom .ftt ul {
+        overflow: hidden; }
+        .footer .footer-bottom .ftt ul li {
+          float: left;
+          padding: 0 12px;
+          background: url(../img/right.png) no-repeat center right; }
+          .footer .footer-bottom .ftt ul li a:hover {
+            color: #f00; }
+        .footer .footer-bottom .ftt ul li:last-child {
+          background: none; }
+    .footer .footer-bottom .ftm {
+      text-align: center; }
+      .footer .footer-bottom .ftm p {
+        margin-top: 18px; }
+      .footer .footer-bottom .ftm p:nth-child(3) {
+        position: relative; }
+        .footer .footer-bottom .ftm p:nth-child(3) img {
+          position: absolute;
+          left: 495px;
+          top: -3px; }
+    .footer .footer-bottom .ftb {
+      margin-left: 95px;
+      margin-top: 25px; }
+      .footer .footer-bottom .ftb ul {
+        overflow: hidden; }
+        .footer .footer-bottom .ftb ul li {
+          float: left;
+          margin-left: 10px;
+          width: 87px;
+          height: 35px;
+          background: url(../img/foot-sprite.png) no-repeat -891px -25px; }
+          .footer .footer-bottom .ftb ul li a {
+            display: block;
+            height: 100%; }
+        .footer .footer-bottom .ftb ul li:nth-child(2) {
+          background-position-x: -107px; }
+        .footer .footer-bottom .ftb ul li:nth-child(3) {
+          background-position-x: -199px; }
+        .footer .footer-bottom .ftb ul li:nth-child(4) {
+          background-position-x: -291px; }
+        .footer .footer-bottom .ftb ul li:nth-child(5) {
+          background-position-x: -387px; }
+        .footer .footer-bottom .ftb ul li:nth-child(6) {
+          background-position-x: -480px; }
+        .footer .footer-bottom .ftb ul li:nth-child(7) {
+          background-position-x: -574px; }
+        .footer .footer-bottom .ftb ul li:nth-child(8) {
+          background-position-x: -683px; }
+        .footer .footer-bottom .ftb ul li:nth-child(9) {
+          background-position-x: -994px; }
 
 .shadow {
   box-shadow: 2px 1px 5px black; }

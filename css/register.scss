@@ -1,0 +1,84 @@
+.main{
+    margin: 0 auto;
+    width: 1200px;
+    overflow: hidden;
+    &>img{
+        float: left;
+    }
+    .mright{
+        float: right;
+        box-sizing: border-box;
+        width: 352px;
+        border: 1px solid #d0d0d0;
+        margin-top: 75px;
+        font-size: 13px;
+        color: #666;
+        .login{
+            background: #F5F5F5;
+            height: 50px;
+            span{
+                float: left;
+                margin-left:20px;
+                line-height: 50px;
+            }
+            a{
+                color: #ff7800;
+                float: right;
+                line-height: 50px;
+                margin-right: 15px;
+            }
+        }
+        .content{
+            padding: 20px 0;
+            width: 300px;
+            margin: 0 auto;
+            ul:nth-child(1) li:nth-child(2) input{
+                   background: url(../img/icon_sign_up_page_system.png) no-repeat right center;
+            }
+            ul{
+                overflow: hidden;
+                li{
+                    float: left;
+                    line-height: 35px;
+                    padding-right: 5px;
+                    input{
+                        border-radius: 5px;
+                        width: 170px;
+                        background-color: #fcfcfc;
+                        height: 34px;
+                        border: 1px solid #e6e6e6;
+                        padding-right: 45px;
+                        padding-left: 10px;
+                        line-height: 35px;
+                    }
+                }
+                li:nth-child(2) input,li:nth-child(3) input{
+                    background: url(../img/icon_sign_up_key.png) no-repeat right center;
+                }
+            }
+            div[class$=tip]{
+                padding-left: 62px;
+                height: 30px;
+                line-height: 30px;
+                color: #000;
+                font-size: 12px;
+            }
+        }
+        #submit{
+            color: #fff;
+            width: 265px;
+            height: 40px;
+            display: block;
+            background: #C81417;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 2px;
+            margin:0 auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    }
+}

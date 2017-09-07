@@ -1,0 +1,132 @@
+@charset "UTF-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+  margin: 0;
+  padding: 0; }
+
+fieldset, img {
+  border: none; }
+
+img {
+  display: block; }
+
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ul, ol {
+  list-style: none; }
+
+body {
+  font-family: "微软雅黑"; }
+
+a {
+  text-decoration: none;
+  color: #7e7e7e; }
+
+.header {
+  height: 120px; }
+  .header .header-main {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%; }
+  .header #logo {
+    height: 79px;
+    width: 192px;
+    display: block;
+    float: left;
+    margin-top: 35px; }
+  .header .tubiao {
+    float: right; }
+    .header .tubiao li {
+      float: left;
+      width: 240px;
+      height: 112px;
+      margin-top: 5px;
+      position: relative; }
+      .header .tubiao li .tuleft {
+        position: absolute;
+        width: 62px;
+        height: 62px;
+        background: url(../img/foot-sprite.png) -270px -105px;
+        top: 20px;
+        left: 10px; }
+      .header .tubiao li .turight {
+        position: absolute;
+        height: 58px;
+        top: 20px;
+        left: 85px; }
+        .header .tubiao li .turight p:nth-child(1) {
+          font-size: 18px;
+          color: #d92b2e;
+          height: 40px;
+          line-height: 40px; }
+        .header .tubiao li .turight p:nth-child(2) {
+          font-size: 12px; }
+    .header .tubiao li:nth-child(2) .tuleft {
+      background-position-x: -450px; }
+    .header .tubiao li:nth-child(3) .tuleft {
+      background-position-x: -360px; }
+
+.footer {
+  margin: 0 auto;
+  width: 1200px;
+  overflow: hidden; }
+  .footer .footer-bottom {
+    font-size: 12px;
+    color: #7e7e7e;
+    margin-top: 28px; }
+    .footer .footer-bottom .ftt {
+      width: 540px;
+      margin: 0 auto; }
+      .footer .footer-bottom .ftt ul {
+        overflow: hidden; }
+        .footer .footer-bottom .ftt ul li {
+          float: left;
+          padding: 0 12px;
+          background: url(../img/right.png) no-repeat center right; }
+          .footer .footer-bottom .ftt ul li a:hover {
+            color: #f00; }
+        .footer .footer-bottom .ftt ul li:last-child {
+          background: none; }
+    .footer .footer-bottom .ftm {
+      text-align: center; }
+      .footer .footer-bottom .ftm p {
+        margin-top: 18px; }
+      .footer .footer-bottom .ftm p:nth-child(3) {
+        position: relative; }
+        .footer .footer-bottom .ftm p:nth-child(3) img {
+          position: absolute;
+          left: 495px;
+          top: -3px; }
+    .footer .footer-bottom .ftb {
+      margin-left: 95px;
+      margin-top: 25px; }
+      .footer .footer-bottom .ftb ul {
+        overflow: hidden; }
+        .footer .footer-bottom .ftb ul li {
+          float: left;
+          margin-left: 10px;
+          width: 87px;
+          height: 35px;
+          background: url(../img/foot-sprite.png) no-repeat -891px -25px; }
+          .footer .footer-bottom .ftb ul li a {
+            display: block;
+            height: 100%; }
+        .footer .footer-bottom .ftb ul li:nth-child(2) {
+          background-position-x: -107px; }
+        .footer .footer-bottom .ftb ul li:nth-child(3) {
+          background-position-x: -199px; }
+        .footer .footer-bottom .ftb ul li:nth-child(4) {
+          background-position-x: -291px; }
+        .footer .footer-bottom .ftb ul li:nth-child(5) {
+          background-position-x: -387px; }
+        .footer .footer-bottom .ftb ul li:nth-child(6) {
+          background-position-x: -480px; }
+        .footer .footer-bottom .ftb ul li:nth-child(7) {
+          background-position-x: -574px; }
+        .footer .footer-bottom .ftb ul li:nth-child(8) {
+          background-position-x: -683px; }
+        .footer .footer-bottom .ftb ul li:nth-child(9) {
+          background-position-x: -994px; }
+
+/*# sourceMappingURL=lorepu.css.map */
