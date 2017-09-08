@@ -9,6 +9,8 @@ body{
 .main{
     border-bottom: 1px solid #e6e6e6;;
     border-top: 1px solid #e6e6e6;
+    overflow: hidden;
+    @include public;
     .recommend{
         @include public;
         margin-top: 20px;
@@ -59,4 +61,108 @@ body{
             }
         }
     }
+    .left{
+        float: left;
+        width: 188px;
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        border: 1px solid #e6e6e6;
+        margin-top: 10px;
+        .le-top{
+            height: 40px;
+            border-bottom: 1px solid #e6e6e6;
+            text-align: center;
+            background: #fafafa;;
+            span:nth-child(1){
+                line-height: 40px;
+                color: #c71417;
+                font-size: 13px;
+            }
+            span:nth-child(2){
+                color: #666;
+                margin-left: 4px;
+            }
+        }
+        ul{
+            width: 145px;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-top: 15px; 
+            li{
+                margin-top: 3px;
+            }
+            dd p:nth-child(1){
+                margin-top: 10px;
+            }
+            dd p:nth-child(2){
+                color: #ff3344;
+                font-weight: bold;
+                height: 20px;
+                display: block;
+                margin-top: 5px;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+    }
+    ul[class^=index]{
+        float: right;
+        .index-l,.index-r{
+            width: 70px;
+            cursor: pointer;
+            i{
+                color: #f00;
+            }
+        }
+        li{
+           margin-top: 8px;
+           margin-right: 4px; 
+           height: 25px;
+           width: 30px;
+           border: 1px solid #666;  
+           text-align: center;  
+           line-height: 25px;
+           float: left;
+        }
+        li:last-child{
+            border: 0;
+            width: 40px;
+        }
+    }
+    .goods{
+        float: right;
+        width: 1000px;
+        li{
+            float: left;
+            width: 240px;
+            height: 350px;
+            border: 1px solid #fff;
+            overflow: hidden;
+            margin-left: 2px;
+            margin-top: 20px;
+            border-bottom: 1px dashed #ddd;
+            cursor: pointer;
+            img{
+                margin-left: 10px;
+            }
+            p:nth-of-type(1){
+                margin-top: 25px;
+                height: 25px;
+                color: #e43b3b;;
+                font-size: 16px;
+                padding: 0px 4px;
+            }
+            p:nth-of-type(2){
+                overflow: hidden;
+                text-align: left;
+                padding: 0px 8px;
+                margin-top: 10px;
+                height: 50px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+.addstyle{
+    border: 1px solid #f00;
 }

@@ -8,6 +8,9 @@ $(".h-left li:eq(0)").mouseover(function(){
 }).mouseout(function(){
 	$(this).css("display","none");
 })*/
+$(".n-top img").click(function(){
+	location.href = "http://127.0.0.1/php/secondtest/second-project/html/home.html";
+})
 $(".header a,.shoplist li").hover(function(){
 	$(this).css("color","#9A0F12");
 },function(){
