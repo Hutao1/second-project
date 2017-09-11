@@ -1,0 +1,141 @@
+@mixin public{
+    width: 1200px;
+    margin: 0 auto;
+}
+body{
+    font-size: 12px;
+    color: #333;
+}
+.margin{
+    height: 45px;
+    border-top: 1px solid #e6e6e6;;
+}
+.main{
+    width: 1198px;
+    margin: 0 auto;
+    border: 1px solid #e6e6e6;
+    padding: 36px 0px;
+    overflow: hidden;
+    .data-left{
+        width: 80px;
+        float: left;
+        img{
+            margin: 30px auto;
+        }
+    }
+    .data-center{
+        float: left;
+        width: 400px;
+        height: 400px;
+        position: relative;
+        cursor: crosshair;
+        .imgleft{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            .cover{
+                position: absolute;
+                background: #fff;
+                opacity: .6;
+                left: 0;
+                top: 0;
+                width: 200px;
+                height: 200px;
+                display: none;
+            }
+        }
+        .imgbig{
+            overflow: hidden;
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: 410px;
+            top: 0;
+            border:1px solid #CCC;
+            display: none;
+            img{
+                position: absolute;
+            }
+        }
+    }
+    .data-right{
+        float: left;
+        width: 500px;
+        margin-left: 10px;
+        margin-top: 30px;
+        .name{
+            font-size: 14px;
+            font-family: Microsoft YaHei, simhei;
+            line-height: 25px;
+            overflow: hidden;
+            color: #666;
+            background: #E9E9E9;
+            margin-bottom: 15px;
+        }
+        .price{
+            width: 480px;
+            background: #f7f7f7;
+            margin-top: 10px;
+            padding:10px;
+            height: 30px;
+            line-height: 30px;
+            .data-price{
+                font-size: 22px;
+                font-weight: bold;
+                color: #c81417;
+            }
+        }
+        ul{
+            margin: 30px 30px;
+            overflow: hidden;
+            li{
+                float: left;
+                width: 65px;
+                height: 40px;
+                line-height: 40px;
+            }
+            li:nth-child(3){
+                width: 150px;
+            }
+            .goodsnum{
+                float: left;
+                width: 30px;
+                height: 37px;
+                border:1px solid #ccc;
+                text-align: center;
+                outline: none;
+            }
+            .numright{
+                float: left;
+                width: 25px;
+                height: 40px;
+                a{
+                    display: block;
+                    height: 18px;
+                    border-top: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    line-height: 18px;
+                    text-align: center;
+                }
+                a:nth-child(2){
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+        }
+        .buy{
+            width: 140px;
+            height: 40px;
+            color: #fff;
+            background: #ff3344;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 30px;
+        }
+    }
+    
+}
+.foot{
+    overflow: hidden;
+}

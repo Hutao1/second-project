@@ -3,8 +3,92 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/shopcar.css"/>
 	</head>
 	<body>
-		购物车
+		<div class="header">
+			<div class="header-main">
+				<ul class="h-left">
+					<li>奥特莱斯购物中心
+						<ul class="shoplist">
+							<span class="three"></span>
+							<span class="three-null"></span>
+							<li>深圳华盛奥特莱斯</li>
+							<li>南宁华盛奥特莱斯</li>
+							<li>南昌华盛奥特莱斯</li>
+							<li>西安华盛奥特莱斯</li>
+							<li>郑州华盛奥特莱斯</li>
+							<li>哈尔滨华盛奥特莱斯</li>
+							<li>重庆华盛奥特莱斯</li>
+							<li>合肥华盛奥特莱斯</li>
+						</ul>
+					</li>
+					<li><a href="javascript:;">商家入驻</a></li>
+				</ul>
+				<ul class="h-right">
+					<li class="plogin"><a href="javascript:;">请登录</a></li>
+					<li class="pregister"><a href="javascript:;">免费注册</a></li>
+					<li class="shopcar"><a href="javascript:;"><i class="iconfont">&#xe502;</i><span>购物车</span><b class="shopnum">0</b></a></li>
+					<li><a href="javascript:;">订单查询</a></li>
+					<li><a href="javascript:;">我的收藏</a></li>
+					<li><a href="javascript:;">帮助中心</a></li>
+				</ul>
+				<span>您好，欢迎来到奥莱购</span>
+			</div>
+		</div>
+		<div class="search">
+			<img src="../img/CggUF1mgDUCAHcWmAAAaPIY0xT4626.png" alt="" class="logo"/>
+			<img src="../img/cart-ft.jpg"/>
+			<div class="s-right">
+				<input type="text" placeholder="新秀丽"/><span>搜索</span>
+			</div>
+		</div>
+		<div class="main">
+			<div class="content"><div class="con">商品清单</div></div>
+			<table class="list">
+				<tr>
+					<th width="60">全选</th>
+					<th width="540">订单商品</th>
+					<th width="120">单价</th>
+					<th width="120">数量</th>
+					<th width="120">小计</th>
+					<th width="120">操作</th>
+				</tr>
+				<!--<tr>
+					<td><input type="checkbox" name="choose"/></td>
+					<td>
+						<div class="message">
+							<img src="../girlistimg/0small.jpg"/>
+							<div class="msg-con">支持深圳自提] 梵思诺VERSINO 男装衬衫 HAAP-T5A006
+10A(10A)红色00L</div>
+						</div>
+					</td>
+					<td>￥298</td>
+					<td>
+						<ul>
+							<li>+</li>
+							<li>
+								<input type="text" class="num" value="1"/>
+							</li>
+							<li>-</li>
+						</ul>
+					</td>
+					<td>￥298</td>
+					<td><span>删除</span></td>
+				</tr>-->
+			</table>
+			<div class="end">
+				<input type="checkbox" class="allchoose"/>全选/全不选
+				<span>总计:&nbsp;0</span>
+			</div>
+		</div>
+		<div class="foot"></div>
 	</body>
 </html>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/turnlogin.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/shopcar.js"></script>

@@ -4,6 +4,8 @@ $(".na").load("http://127.0.0.1/php/secondtest/second-project/html/home.html .na
 	})
 });
 $(".foot").load("http://127.0.0.1/php/secondtest/second-project/html/home.html .footer");
+logined();
+getNum();
 $(".left dd p:even").each(function(){
 	if($(this).html().length >12){
 		var str = $(this).html().substr(0,12);
@@ -103,7 +105,7 @@ function show(index,msg){
 					<img src="../girlistimg/${msg.list[i].src}"/>
 					<p>${msg.list[i].price}</p>
 					<p>${msg.list[i].name}</p>
-					<span style="none" data-id="${msg.list[i].id}"></span>
+					<span style="display:none" data-id="${msg.list[i].id}"></span>
 				</li>`
 	}
 	$(".goods").html(str);

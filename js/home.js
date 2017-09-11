@@ -28,6 +28,8 @@ function autoPlay(){
 $(".girldress").click(function(){
 	location.href = "http://127.0.0.1/php/secondtest/second-project/html/girldress.html";
 })
+logined();
+getNum();
 
 
 

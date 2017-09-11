@@ -4,7 +4,6 @@ var telflag = false,pwdflag = false;
 if(getCookie("user")!=null){
 	telflag = true;
 	pwdflag = true;
-	console.log(getCookie("user"))
 	$("#rem").prop("checked","true");
 	var _json = getCookie("user");
 	$("#tel").val(_json.tel);

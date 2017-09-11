@@ -17,14 +17,11 @@ $(".header a,.shoplist li").hover(function(){
 	$(this).css("color","");
 })
 
-$(".h-right li:eq(0) a").click(function(){
+$(".plogin").click(function(){
 	location.href = "http://127.0.0.1/php/secondtest/second-project/html/login.html";
 })
-$(".h-right li:eq(1) a").click(function(){
+$(".pregister").click(function(){
 	location.href = "http://127.0.0.1/php/secondtest/second-project/html/register.html";
-})
-$(".h-right li:eq(2) a").click(function(){
-	location.href = "http://127.0.0.1/php/secondtest/second-project/html/shopcar.html";
 })
 $(".n-top input").focus(function(){
 	$(this).attr("placeholder","请输入您想寻找的商品名称");
@@ -32,3 +29,39 @@ $(".n-top input").focus(function(){
 $(".shopcar").click(function(){
 	checklogin();
 })
+function getNum(){
+	if(getCookie("login")){
+		$.ajax({
+			type:"get",
+			url:"http://127.0.0.1/php/secondtest/second-project/php/getshop.php",
+			data:"method=get&tel="+getCookie("login").tel,
+			success:function(msg){
+				if(msg == ""){
+					$(".shopnum").html("0");
+				}else{
+					var arr = msg.split(";");
+					if(arr[1] == ""){
+						$(".shopnum").html(arr[0].split("_")[1].split("=")[1]);
+					}else{
+						var getnumber = 0;
+						for(var i in arr){
+							getnumber += parseInt(arr[i].split("_")[1].split("=")[1]);
+						}
+						$(".shopnum").html(getnumber);
+					}
+					
+				}
+			}
+		})
+	}else{
+		$(".shopnum").html("0");
+	}
+}
+function logined(){
+	if(getCookie("login")){
+		$(".plogin").remove();
+		$(".pregister").remove();
+		var $li = $(`<li style="margin:0 20px">${getCookie("login").tel}</li>`);
+		$(".h-right").prepend($li);
+	}
+}
