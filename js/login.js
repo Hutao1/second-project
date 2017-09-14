@@ -1,5 +1,5 @@
-$("#header").load("http://127.0.0.1/php/secondtest/second-project/html/lorepu.html .header");
-$("#footer").load("http://127.0.0.1/php/secondtest/second-project/html/lorepu.html .footer");
+$("#header").load("../html/lorepu.html .header");
+$("#footer").load("../html/lorepu.html .footer");
 var telflag = false,pwdflag = false;
 if(getCookie("user")!=null){
 	telflag = true;
@@ -31,7 +31,7 @@ $("#submit").click(function(){
 	if(telflag&&pwdflag){
 		$.ajax({
 			type:"get",
-			url:"http://127.0.0.1/php/secondtest/second-project/php/login.php",
+			url:"../php/login.php",
 			data:"status=login&tel="+$("#tel").val()+"&upwd="+$("#pwd").val(),
 			success:function(msg){
 				if(msg == "1"){
@@ -42,7 +42,7 @@ $("#submit").click(function(){
 					}else{
 						removeCookie("user");
 					}
-					location.href = "http://127.0.0.1/php/secondtest/second-project/html/home.html"
+					location.href = "../html/home.html"
 				}else{
 					$(".fail").css("display","block").fadeOut(3000);
 				}

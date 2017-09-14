@@ -1,9 +1,9 @@
-$(".foot").load("http://127.0.0.1/php/secondtest/second-project/html/home.html .footer");
+$(".foot").load("../html/home.html .footer");
 if(!getCookie("login")){
-		location.href = "http://127.0.0.1/php/secondtest/second-project/html/login.html";
+		location.href = "../html/login.html";
 	}
 $(".logo").click(function(){
-	location.href = "http://127.0.0.1/php/secondtest/second-project/html/home.html";
+	location.href = "../html/home.html";
 })
 logined();
 getNum();
@@ -31,14 +31,14 @@ getNum();
 				</tr>*/
 $.ajax({
 	type:"get",
-	url:"http://127.0.0.1/php/secondtest/second-project/php/getshop.php",
+	url:"../php/getshop.php",
 	data:"method=get&tel="+getCookie("login").tel,
 	success:function(msg1){
 //		id=0_num=1;id=4_num=1;id=6_num=2
 		if(msg1!=""){
 			$.ajax({
 				type:"get",
-				url:"http://127.0.0.1/php/secondtest/second-project/girldress_json/girldress.json",
+				url:"../girldress_json/girldress.json",
 				success:function(msg2){
 					var arr = msg1.split(";");
 					var name = "",price="",smallimg="";
@@ -59,7 +59,7 @@ $.ajax({
 						$tr.html(`<td><input type="checkbox" name="choose"/></td>
 							<td>
 								<div class="message">
-									<img src="http://127.0.0.1/php/secondtest/second-project/girlistimg/${smallimg}"/>
+									<img src="http://../girlistimg/${smallimg}"/>
 									<div class="msg-con">${name}</div>
 								</div>
 							</td>
@@ -106,7 +106,7 @@ $(".list").on("click","span",function(){
 	var that = $(this);
 	$.ajax({
 		type:"get",
-		url:"http://127.0.0.1/php/secondtest/second-project/php/getshop.php",
+		url:"http://../php/getshop.php",
 		data:"method=get&tel="+getCookie("login").tel,
 		success:function(msg){
 			var arr = msg.split(";");
@@ -124,7 +124,7 @@ $(".list").on("click","span",function(){
 			}
 			$.ajax({
 				type:"get",
-				url:"http://127.0.0.1/php/secondtest/second-project/php/getshop.php",
+				url:"http://../php/getshop.php",
 				data:"method=set&tel="+getCookie("login").tel+"&ushop="+str,
 				success:function(msg){
 					console.log(msg)

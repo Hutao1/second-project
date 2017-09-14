@@ -1,5 +1,5 @@
-$("#header").load("http://127.0.0.1/php/secondtest/second-project/html/lorepu.html .header");
-$("#footer").load("http://127.0.0.1/php/secondtest/second-project/html/lorepu.html .footer");
+$("#header").load("../html/lorepu.html .header");
+$("#footer").load("../html/lorepu.html .footer");
 var telflag = false,pwdflag = false,rpwdflag = false;
 $("#tel").focus(function(){
 	$(".teltip").html("请输入手机号").css("color","#000");
@@ -9,7 +9,7 @@ $("#tel").focus(function(){
 	if(reg.test($(this).val())){
 		$.ajax({
 			type:"get",
-			url:"http://127.0.0.1/php/secondtest/second-project/php/login.php",
+			url:"../php/login.php",
 			data:"status=register&tel="+$(this).val(),
 			success:function(msg){
 				if(msg == "0"){
@@ -53,11 +53,11 @@ $("#submit").click(function(){
 	if(telflag&&pwdflag&&rpwdflag){
 		$.ajax({
 			type:"get",
-			url:"http://127.0.0.1/php/secondtest/second-project/php/register.php",
+			url:"../php/register.php",
 			data:"tel="+$("#tel").val()+"&upwd="+$("#pwd").val(),
 			success:function(msg){
 //				console.log(msg);
-				location.href = "http://127.0.0.1/php/secondtest/second-project/html/home.html";
+				location.href = "../html/home.html";
 			}
 		});
 	}else{

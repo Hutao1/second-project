@@ -1,9 +1,9 @@
-$(".na").load("http://127.0.0.1/php/secondtest/second-project/html/home.html .nav",function(){
+$(".na").load("../html/home.html .nav",function(){
 	$(".n-top img").click(function(){
-		location.href = "http://127.0.0.1/php/secondtest/second-project/html/home.html";
+		location.href = "../html/home.html";
 	})
 });
-$(".foot").load("http://127.0.0.1/php/secondtest/second-project/html/home.html .footer");
+$(".foot").load("../html/home.html .footer");
 logined();
 getNum();
 $(".left dd p:even").each(function(){
@@ -21,7 +21,7 @@ var index = 1;
 $(".index-l").css("color","#cdcdcd").find("i").css("color","#cdcdcd");
 $.ajax({
 	type:"get",
-	url:"http://127.0.0.1/php/secondtest/second-project/girldress_json/girldress.json",
+	url:"../girldress_json/girldress.json",
 	success:function(msg){
 		var num = Math.ceil(msg.list.length/8);
 		$("ul[class^=index] li:last-child").html("共"+num+"页");
@@ -88,7 +88,7 @@ $.ajax({
 		}).on("click","li",function(){
 			//跳转加上id让详情页检索相应的数据
 			var id = $(this).find("span").data("id");
-			location.href = "http://127.0.0.1/php/secondtest/second-project/html/details.html?id="+id;
+			location.href = "../html/details.html?id="+id;
 		})
 	}
 });

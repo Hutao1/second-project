@@ -1,17 +1,17 @@
-$(".na").load("http://127.0.0.1/php/secondtest/second-project/html/home.html .nav",function(){
+$(".na").load("../html/home.html .nav",function(){
 	$(".n-top img").click(function(){
-		location.href = "http://127.0.0.1/php/secondtest/second-project/html/home.html";
+		location.href = "../html/home.html";
 	})
 });
-$(".foot").load("http://127.0.0.1/php/secondtest/second-project/html/home.html .footer");
+$(".foot").load("../html/home.html .footer");
 var str = location.href;
-//http://127.0.0.1/php/secondtest/second-project/html/details.html?id=5
+//../html/details.html?id=5
 var id = parseInt(str.split("?")[1].split("=")[1]);
 logined();
 getNum();
 $.ajax({
 	type:"get",
-	url:"http://127.0.0.1/php/secondtest/second-project/girldress_json/girldress.json",
+	url:"../girldress_json/girldress.json",
 	success:function(msg){
 		var name = "",price="",smallimg="",middleimg="",bigimg="";
 		for(var i in msg.list){
@@ -25,9 +25,9 @@ $.ajax({
 				}
 			}
 		}
-		$(".data-left img").attr("src","http://127.0.0.1/php/secondtest/second-project/girlistimg/"+smallimg);
-		$(".imgleft img").attr("src","http://127.0.0.1/php/secondtest/second-project/girlistimg/"+middleimg);
-		$(".imgbig img").attr("src","http://127.0.0.1/php/secondtest/second-project/girlistimg/"+bigimg);
+		$(".data-left img").attr("src","../girlistimg/"+smallimg);
+		$(".imgleft img").attr("src","../girlistimg/"+middleimg);
+		$(".imgbig img").attr("src","../girlistimg/"+bigimg);
 		$(".name").html(name);
 		$(".data-price").html(price);
 	}
@@ -72,12 +72,12 @@ $(".sub").click(function(){
 })
 $(".buy").click(function(){
 	if(!getCookie("login")){
-		location.href = "http://127.0.0.1/php/secondtest/second-project/html/login.html";
+		location.href = "../html/login.html";
 		return;
 	}else{
 		$.ajax({
 			type:"get",
-			url:"http://127.0.0.1/php/secondtest/second-project/php/getshop.php",
+			url:"../php/getshop.php",
 			data:"method=get&tel="+getCookie("login").tel,
 			success:function(msg){
 				var one = "id="+id+"_num="+$(".goodsnum").html();
@@ -104,7 +104,7 @@ $(".buy").click(function(){
 				}
 				$.ajax({
 					type:"get",
-					url:"http://127.0.0.1/php/secondtest/second-project/php/getshop.php",
+					url:"../php/getshop.php",
 					data:"method=set&tel="+getCookie("login").tel+"&ushop="+str,
 					success:function(msg){
 						getNum();

@@ -9,7 +9,7 @@ $(".h-left li:eq(0)").mouseover(function(){
 	$(this).css("display","none");
 })*/
 $(".n-top img").click(function(){
-	location.href = "http://127.0.0.1/php/secondtest/second-project/html/home.html";
+	location.href = "../html/home.html";
 })
 $(".header a,.shoplist li").hover(function(){
 	$(this).css("color","#9A0F12");
@@ -18,10 +18,10 @@ $(".header a,.shoplist li").hover(function(){
 })
 
 $(".plogin").click(function(){
-	location.href = "http://127.0.0.1/php/secondtest/second-project/html/login.html";
+	location.href = "../html/login.html";
 })
 $(".pregister").click(function(){
-	location.href = "http://127.0.0.1/php/secondtest/second-project/html/register.html";
+	location.href = "../html/register.html";
 })
 $(".n-top input").focus(function(){
 	$(this).attr("placeholder","请输入您想寻找的商品名称");
@@ -33,7 +33,7 @@ function getNum(){
 	if(getCookie("login")){
 		$.ajax({
 			type:"get",
-			url:"http://127.0.0.1/php/secondtest/second-project/php/getshop.php",
+			url:"../php/getshop.php",
 			data:"method=get&tel="+getCookie("login").tel,
 			success:function(msg){
 				if(msg == ""){
